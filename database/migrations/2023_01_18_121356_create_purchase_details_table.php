@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('barcode', 50);
             $table->string('name', 50);
-            $table->double('purchase_price', 15, 4);
-            $table->float('qty');
+            $table->double('purchase_price');
+            $table->double('qty');
             $table->bigInteger('purchase_id');
             $table->timestamps();
         });

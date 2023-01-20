@@ -15,8 +15,8 @@ class PrintController extends Controller
             ->first();
         $data = [
             'store'     => [
-                'name' => 'TOKO PANDAWA',
-                'address' => 'Dusun Sudimara Rt 03/06, Cimanggu, Cilacap'
+                'name' => auth()->user()->store->name,
+                'address' => auth()->user()->store->address
             ],
             'transaction'      => $transaction
         ];
@@ -31,8 +31,8 @@ class PrintController extends Controller
         if ($transaction->count()) {
             $data = [
                 'store'     => [
-                    'name' => 'TOKO PANDAWA',
-                    'address' => 'Dusun Sudimara Rt 03/06, Cimanggu, Cilacap'
+                    'name' => auth()->user()->store->name,
+                    'address' => auth()->user()->store->address
                 ],
                 'transaction'      => $transaction->first()
             ];

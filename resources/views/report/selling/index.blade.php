@@ -53,7 +53,7 @@
                                     @foreach ($data['report'] as $item)
                                         <tr>
                                             <td>{{ $item->code }}</td>
-                                            <td>Rp{{ number_format($item->total, 0, ',', '.') }}</td>
+                                            <td>{{ number_format($item->total, 0, ',', '.') }}</td>
                                             <td>{{ $item->created_at }}</td>
                                             <td class="text-center">
                                                 <a href="{{ route('report.selling.detail', ['code' => $item->code]) }}"

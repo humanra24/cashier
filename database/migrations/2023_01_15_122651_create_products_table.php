@@ -17,8 +17,8 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->string('barcode', 30)->unique();
             $table->string('name', 50)->unique();
-            $table->double('purchase_price', 15, 4);
-            $table->double('selling_price', 15, 4);
+            $table->double('purchase_price');
+            $table->double('selling_price');
             $table->integer('stock');
             $table->bigInteger('user_id');
             $table->timestamps();

@@ -50,7 +50,7 @@
             @foreach ($data['transaction']->details as $item)
                 <tr>
                     <td>{{ $item->name }}</td>
-                    <td>{{ $item->selling_price }}</td>
+                    <td>{{ number_format($item->selling_price, 0, ',', '.') }}</td>
                     <td class="text-center">{{ $item->qty }}</td>
                     <td class="text-end">{{ number_format($item->qty * $item->selling_price, 0, ',', '.') }}</td>
                 </tr>

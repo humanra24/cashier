@@ -27,9 +27,10 @@
                                             <td class="text-nowrap">{{ $item->barcode }}</td>
                                             <td class="text-nowrap">{{ $item->name }}</td>
                                             <td class="text-nowrap">
-                                                Rp{{ number_format($item->selling_price, 0, ',', '.') }}</td>
+                                                {{ number_format($item->selling_price, 0, ',', '.') }}</td>
                                             <td class="text-nowrap text-center">{{ $item->qty }}</td>
-                                            <td class="text-end">{{ $item->qty * $item->selling_price }}</td>
+                                            <td class="text-end">
+                                                {{ number_format($item->qty * $item->selling_price, 0, ',', '.') }}</td>
                                         </tr>
                                     @endforeach
                                 </tbody>

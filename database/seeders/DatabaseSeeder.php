@@ -17,11 +17,24 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $user = User::create([
+        User::create([
             'name' => 'Hurasan',
             'email' => 'admin@hurasan.com',
             'password' => Hash::make('@Hurasan24'),
             'level' => 0
+        ]);
+
+        $user = User::create([
+            'name' => 'pandawa',
+            'email' => 'admin@pandawa.com',
+            'password' => Hash::make('@Pandawa5')
+        ]);
+
+        Store::create([
+            'name'  => 'Toko Pandawa',
+            'telegram'  => '0852916469684',
+            'address'   => 'Dusun Sudimara rt 03/06 Bantarmangu, Cimanggu, Cilacap',
+            'user_id'   => $user->id
         ]);
     }
 }

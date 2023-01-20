@@ -63,9 +63,9 @@
                                     <tr>
                                         <td>{{ $item->barcode }}</td>
                                         <td>{{ $item->name }}</td>
-                                        <td>Rp{{ number_format($item->selling_price, 0, ',', '.') }}</td>
+                                        <td>{{ number_format($item->selling_price, 0, ',', '.') }}</td>
                                         <td class="text-center">{{ $item->qty }}</td>
-                                        <td class="text-end">Rp{{ number_format($item->subtotal, 0, ',', '.') }}</td>
+                                        <td class="text-end">{{ number_format($item->subtotal, 0, ',', '.') }}</td>
                                         <td class="d-flex justify-content-center">
                                             <a href="#" class="me-3 text-warning"
                                                 onclick="edit({
